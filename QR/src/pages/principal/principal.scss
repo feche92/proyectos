@@ -1,0 +1,37 @@
+@import "../../theme/variables.scss";
+
+page-principal {
+    font-family: 'Ubuntu', sans-serif;
+
+    .scroll-content{
+        background-color: white;
+    }
+
+    .text{
+        color: $first-detail-color;
+    }
+
+    .botonScan .button-md {
+        background: $first-detail-color;
+        border-radius: 2px !important;
+        border: 1px solid $second-detail-color;
+        height: 10rem;
+        font-size: 25px;
+      }
+      .botonScan .button-md:active {
+       background: #1C2331;
+     }
+     .transparent-box {
+        border-radius: 2px !important;
+        background-color: rgba(143, 0, 251, 0.329);
+        padding: 20px 20px 0px 20px;
+        // margin-top: 30px;
+        margin-top: 0px;
+      }
+      ion-item{
+        background-color: white;
+      }
+      .item-md h1 {
+        margin: 0px;
+    }
+}

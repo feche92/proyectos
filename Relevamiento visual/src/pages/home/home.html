@@ -1,0 +1,61 @@
+<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top">
+    </div>
+    <img src="assets/imgs/icon.png">
+    <div class="Aligner-item Aligner-item--bottom">
+    </div>
+  </div>
+</div>
+<ion-header>
+  <ion-navbar transparent>
+    <ion-title>Iniciar sesión</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label floating>Correo electrónico: </ion-label>
+        <ion-input type="email" required name="email" [(ngModel)]="email"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label floating>Contraseña: </ion-label>
+        <ion-input type="password" required name="password" [(ngModel)]="pass"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col text-center>
+      <button ion-button round small color="primary" (click)="admin()">Administrador</button>
+      <button ion-button round small color="primary" (click)="invitado()">Invitado</button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col text-center>
+      <button ion-button round small color="primary" (click)="usuario()">Usuario</button>
+      <button ion-button round small color="primary" (click)="anonimo()">Anónimo</button>
+    </ion-col>
+  </ion-row> 
+  <ion-row>
+    <ion-col text-center>
+      <button ion-button round small color="primary" (click)="tester()">Tester</button>
+    </ion-col>
+  </ion-row> 
+  <ion-row>
+    <ion-col>
+      <button ion-button block color="primary" (click)="aceptar()">Iniciar Sesión</button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <button ion-button block color="light" (click)="cancelar()">Cancelar</button>
+    </ion-col>
+  </ion-row>
+</ion-content>

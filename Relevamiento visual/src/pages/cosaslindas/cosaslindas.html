@@ -1,0 +1,50 @@
+<!--
+  Generated template for the CosaslindasPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Cosas Lindas!</ion-title>
+    <ion-buttons end style="margin-right: 10px;">
+        <button ion-button icon-only color="white" (click)="back()">
+            <ion-icon name="arrow-round-back"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div *ngIf="displayed">
+        <div *ngFor="let dato of lista" class="miDiv">
+            <div class="flex-v first-item" *ngIf="dato.foto != $0">
+                <div class="picture-container">
+                    <img class="picture" src='{{dato.foto}}' (click)="showPicture(dato)" />
+                </div>
+                <div class="flex-v picture-detail">
+                    <div class="user-info">
+                        {{dato.usuario}}
+                    </div>
+                    <div class="flex-h actions-container">
+                        <div class="width-50">
+                            <div class="flex-v" >
+                                {{dato.fecha}}
+                            </div>
+                        </div>
+                        <div class="width-50 end-horizontal">
+                            <div class="flex-h"></div>
+                            <div class="count-detail">{{dato.like}}</div>
+                            <div class="flex-v icon-container mi-fab" (click)="like(dato)">
+                                <img class="mi-fab-icon" src="assets/imgs/like.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="displayed && lista.length == 0" class="no-data">
+        No hay fotos cargadas
+    </div>
+</ion-content>

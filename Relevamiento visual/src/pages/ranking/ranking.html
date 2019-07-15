@@ -1,0 +1,29 @@
+<!--
+  Generated template for the RankingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Resultados</ion-title>
+    <ion-buttons end style="margin-right: 10px;">
+        <button ion-button icon-only color="white" (click)="back()">
+            <ion-icon name="arrow-round-back"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="flex-v">
+    <div class="flex-v center-horizontal center-vertical">
+        <div class="title">Cosas Lindas!</div>
+        <canvas id="canvas-chart"></canvas>
+    </div>
+    <div class="flex-v center-horizontal center-vertical" style="margin-top:2em;">
+        <div class="title">Cosas Feas!</div>
+        <canvas id="canvas-feas"></canvas>
+    </div>
+  </div>
+</ion-content>

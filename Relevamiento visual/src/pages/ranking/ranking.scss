@@ -1,0 +1,14 @@
+@import "../../theme/variables.scss";
+
+page-ranking {
+    .scroll-content{
+        background-color: $background-color;  
+        display: flex;
+        flex-direction: column;
+        padding: 1em !important;
+    }
+    .title{
+        color: $first-detail-color;
+        font-size: 2rem;
+    }
+}

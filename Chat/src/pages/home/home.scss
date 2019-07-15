@@ -1,0 +1,44 @@
+@import "../../theme/variables.scss";
+
+page-home {
+    .scroll-content{
+        background-color: $background-color;  
+        display: flex;
+        flex-direction: column;
+        padding: 1em !important;
+    }   
+
+    .buttons-container{
+        height: calc(100% - 1em);
+    }
+
+    .big-button-container{
+        border-radius: 1em;
+        :hover{
+            cursor: pointer;            
+            background-color: rgba(5, 123, 123, 0.38);
+            border-radius: 1em;
+        }
+        &-first{
+            margin-bottom: 0.5em;
+            background-color: $aula-uno-color;
+            //background-image: radial-gradient(#ff9100, #f59d31, #f1b15d, #efc185, #ffffff)
+        }
+        &-second{
+            margin-top: 0.5em;
+            background-color: $aula-dos-color;
+            //background-image: radial-gradient(#0d7a80, #1aadb5, #42b7bb, #aaf1f5, #ffffff);
+        }
+    }
+
+    .text-title{
+        color: white;
+        font-size: 2.5rem;
+    }
+
+    ion-icon{
+        color: white;
+        font-size: 3em;
+        line-height: 2;
+    }
+}

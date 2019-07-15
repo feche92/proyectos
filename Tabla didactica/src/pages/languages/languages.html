@@ -1,0 +1,19 @@
+<div class="end-horizontal">
+  <div class="flex-h flags-continer">
+    <div class="text flex-v center-horizontal center-vertical flag-container" (click)="flagClick('ar')" [ngClass]="{'flag-selected': selectedLanguage.abreviacion == 'ar'}">
+      <img class="flag" src="assets/imgs/banderas/ar_round.png">
+     <!-- <div class="languaje-container"> {{ languages[selectedLanguage.abreviacion].espanol }}</div> -->
+    </div>
+    <div class="text flex-v center-horizontal center-vertical flag-container" (click)="flagClick('por')" [ngClass]="{'flag-selected': selectedLanguage.abreviacion == 'por'}">
+      <img class="flag" src="assets/imgs/banderas/br_round.png">
+      <!--<div class="languaje-container"> {{ languages[selectedLanguage.abreviacion].portugues }}</div>-->
+    </div>
+    <div class="text flex-v center-horizontal center-vertical flag-container" (click)="flagClick('ger')" [ngClass]="{'flag-selected': selectedLanguage.abreviacion == 'ger'}">
+      <img class="flag" src="assets/imgs/banderas/ge_round.png">
+      <!--<div class="languaje-container"> {{ languages[selectedLanguage.abreviacion].aleman }}</div>-->
+    </div>
+    <div class="text flex-v center-horizontal center-vertical flag-container" (click)="flagClick('en')" [ngClass]="{'flag-selected': selectedLanguage.abreviacion == 'en'}">
+      <img class="flag" src="assets/imgs/banderas/ing_round.png">
+      <!--<div class="languaje-container"> {{ languages[selectedLanguage.abreviacion].ingles }}</div>-->
+    </div>
+  </div>

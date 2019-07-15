@@ -1,0 +1,385 @@
+@import "../theme/variables.scss";
+
+ion-app.md{
+    background-image: url('../assets/imgs/splashAlarma.png') !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.flex{
+    &-v{
+        display: flex;
+        flex-direction: column
+    }
+    &-h{
+        display: flex;
+        flex-direction: row
+    }
+}
+
+.height{
+    &-10{
+        height: 10%;
+    }
+    &-20{
+        height: 20%;
+    }
+    &-30{
+        height: 30%;
+    }
+    &-40{
+        height: 40%;
+    }
+    &-50{
+        height: 50%;
+    }
+    &-60{
+        height: 60%;
+    }
+    &-70{
+        height: 70%;
+    }
+    &-80{
+        height: 80%;
+    }
+    &-90{
+        height: 90%;
+    }
+    &-100{
+        height: 100%;
+    }
+}
+
+.width{
+    &-10{
+        width: 10%;
+    }
+    &-20{
+        width: 20%;
+    }
+    &-30{
+        width: 30%;
+    }
+    &-35{
+        width: 35%;
+    }
+    &-40{
+        width: 40%;
+    }
+    &-50{
+        width: 50%;
+    }
+    &-60{
+        width: 60%;
+    }
+    &-70{
+        width: 70%;
+    }
+    &-80{
+        width: 80%;
+    }
+    &-90{
+        width: 90%;
+    }
+    &-100{
+        width: 100%;
+    }
+}
+
+.center-horizontal{
+    display: flex;
+    justify-content: center;
+}
+
+.center-vertical{
+    display: flex;
+    align-items: center;
+}
+
+.end-horizontal{
+    display: flex;
+    justify-content: flex-end
+}
+
+.first-item{
+    margin-top: 1em;
+}
+
+.last-item{
+    margin-bottom:1em;
+}
+
+.margin-top-bottom{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.flex-container{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+}
+
+.category-image-container{
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.fila-lista-container{
+    background-color: $third-detail-color;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    height: 100px;  
+    margin-bottom: 1em;
+}
+
+.fila-image-container{
+    height: 100%;
+    width: 65px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.fila-image{
+    max-width: 100%;
+    padding: 0.1em;
+    position: absolute;
+    display: block;
+    max-height: 100%;
+}
+
+.fila-description{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: white;
+    font-size: 4rem;
+    margin-left: 10px;
+}
+
+.fab-md-dark{
+    color: $first-detail-color;
+    background-color: white;
+}
+
+.ion-page > ion-content{
+    background: transparent;
+}
+
+ion-alert{
+    align-items: center !important;
+}
+
+.confirm-alert{
+    > div{
+      background-color:$first-detail-color!important;
+      text-align: center;
+      font-weight: bold;
+    }
+    .alert-message{
+        color: #ffffff;
+        font-size: 1.3em;
+        padding: 1em;
+    }
+    .alert-head{
+        color: #ffffff !important;
+    }
+    .alert-button{
+        color: #ffffff;
+    }
+  }
+
+.alert-head{
+    padding: 15px !important;
+    background-color: black;
+    color: white;
+}
+
+.alert-input-group{
+    padding: 10px 30px !important;
+}
+
+.alert-button-group{
+    padding-top: 0px !important;
+}
+
+.success-alert{
+    text-align: center;
+    > div{
+        background-color: $first-detail-color !important;
+    }
+}
+
+.error-alert{
+    text-align: center;
+    > div{
+        background-color: $error-color !important;//$error-color !important;
+    }
+}
+
+.small-spinner{
+    .spinner-circles circle{
+        fill: $third-detail-color;
+    }
+    .loading-wrapper{
+        transform: scale(2)!important;
+    }
+}
+
+.toolbar-background-md{
+    background-color: #222; 
+}
+.toolbar-title-md{
+    color: white;
+}
+ion-menu{
+    .scroll-content{
+        background-color: #5c9922;
+    }
+    .item-md{
+        background-color: #5c9922;
+        color:white;
+    }
+    .toolbar-title-md{
+        color: white;
+    }
+    .toolbar-background-md{
+        background-color: $first-detail-color;
+    }
+}
+
+@-webkit-keyframes bounce {
+    from,
+    20%,
+    53%,
+    80%,
+    to {
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    40%,
+    43% {
+      -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      -webkit-transform: translate3d(0, -30px, 0);
+      transform: translate3d(0, -30px, 0);
+    }
+  
+    70% {
+      -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      -webkit-transform: translate3d(0, -15px, 0);
+      transform: translate3d(0, -15px, 0);
+    }
+  
+    90% {
+      -webkit-transform: translate3d(0, -4px, 0);
+      transform: translate3d(0, -4px, 0);
+    }
+  }
+  
+  @keyframes bounce {
+    from,
+    20%,
+    53%,
+    80%,
+    to {
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    40%,
+    43% {
+      -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      -webkit-transform: translate3d(0, -30px, 0);
+      transform: translate3d(0, -30px, 0);
+    }
+  
+    70% {
+      -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      -webkit-transform: translate3d(0, -15px, 0);
+      transform: translate3d(0, -15px, 0);
+    }
+  
+    90% {
+      -webkit-transform: translate3d(0, -4px, 0);
+      transform: translate3d(0, -4px, 0);
+    }
+  }
+  
+  .bounce {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+  }
+  
+  
+   /*animacion*/
+   #custom-overlay {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 100000;
+      width:100%;
+      background-image: url("../assets/imgs/splashAlarmaFondo.png");
+      background-repeat: no-repeat ;
+      background-size: cover ;
+      background-position: center ;
+    }
+    .flb {
+      height:100%;
+      width:100%;
+      animation: pulse 1s linear forwards;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .Aligner-item {
+      max-width: 50%;
+    }
+    .Aligner-item--top {
+      align-self: flex-start;
+    }
+    .Aligner-item--bottom {
+      align-self: flex-end;
+    }
+    #custom-overlay img {
+      display: block;
+      margin: 0 auto;
+      width: 70%;
+      height: auto;
+      animation: bounce 2000ms linear infinite both;
+      animation-delay: 1s;
+    }
+  
+    .animation-target {
+      -webkit-animation: bounce 1000ms linear both;
+      animation: bounce 1000ms linear both;
+    }

@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon color="light" name="menu"></ion-icon>
+    </button>
+    <ion-title>Alarma</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label floating>Correo Electrónico</ion-label>
+        <ion-input type="email" required name="email" [(ngModel)]="email"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label floating>Contraseña</ion-label>
+        <ion-input type="password" required name="password" [(ngModel)]="pass"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-list radio-group [(ngModel)]="userSelect" (ionChange)="userSelectChange()" >
+
+        <ion-item class="content">
+            <ion-label>Administrador</ion-label>
+            <ion-radio value="admin"></ion-radio>
+        </ion-item>
+    
+        <ion-item class="content">
+            <ion-label>Invitado</ion-label>
+            <ion-radio value="invitado"></ion-radio>
+        </ion-item>
+        <ion-item class="content">
+          <ion-label>Usuario</ion-label>
+          <ion-radio value="usuario"></ion-radio>
+        </ion-item>
+        <ion-item class="content">
+          <ion-label>Anónimo</ion-label>
+          <ion-radio value="anonimo"></ion-radio>
+        </ion-item>
+        <ion-item class="content">
+          <ion-label>Tester</ion-label>
+          <ion-radio value="tester"></ion-radio>
+        </ion-item>
+    
+      </ion-list>
+    </ion-col>
+  </ion-row>
+
+
+  <ion-row>
+    <ion-col>
+      <button ion-button block color="dark" (click)="aceptar()">Iniciar Sesión</button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <button ion-button block color="light" (click)="cancelar()">Cancelar</button>
+    </ion-col>
+  </ion-row>
+</ion-content>

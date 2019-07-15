@@ -1,0 +1,47 @@
+@import "../../theme/variables.scss";
+
+page-principal {
+    .scroll-content{
+        background-color: $background-color;  
+        //background-image: radial-gradient(#f5ce7a, #f3bb73, #f3b42e, #f5a031, #e07f00);
+        display: flex;
+        flex-direction: column;
+        padding: 1em !important;
+    }   
+
+    .buttons-container{
+        height: calc(100% - 1em);
+    }
+
+    .big-button-container{
+        border-radius: 1em;
+        :hover{
+            cursor: pointer;            
+            background-color: rgba(5, 123, 123, 0.38);
+            border-radius: 1em;
+        }
+        &-first{
+            margin-bottom: 0.5em;
+            background-image: radial-gradient(#0f8e94, #0e8d94, #0e8d94, #0a7479, #0a7479);
+            //background-image: radial-gradient(#d46893, #d21661, #ea2975, #af0548, #b6396b);
+            //background-color: $first-detail-color;
+        }
+        &-second{
+            margin-top: 0.5em;
+            background-image: radial-gradient(#0f8e94, #0e8d94, #0e8d94, #0a7479, #0a7479);
+            //background-image: radial-gradient(#d46893, #d21661, #ea2975, #af0548, #b6396b);
+            //background-color: $first-detail-color;
+        }
+    }
+
+    .text-title{
+        color: white;
+        font-size: 2.5rem;
+    }
+
+    ion-icon{
+        color: white;
+        font-size: 3em;
+        line-height: 2;
+    }
+}

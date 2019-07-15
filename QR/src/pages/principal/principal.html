@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      Carga de Crédito
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="flex-v height-100">
+    <div class="height-10 text" text-right>
+      <h3>{{usuarioOnline}}</h3>
+    </div>
+    <div class="height-80 center-vertical center-horizontal">
+      <div class="width-100">
+        <div class="center-horizontal first-item flex-v">
+          <div style="display:flex; justify-content: center; align-items: center">
+            <h1 class="text">Crédito actual:</h1>
+          </div>
+          <div class="transparent-box">
+            <ion-row>
+              <ion-col>
+                <ion-list>
+                  <ion-item>
+                    <div style="display:flex; justify-content: center; align-items: center">
+                      <h1 class="text" *ngIf="creditoActual == 0"> sin crédito
+                      </h1>
+                      <h1 class="text" *ngIf="creditoActual > 0" style="font-weight:600; font-size: 2.5em;">$ {{creditoActual}} </h1>
+                    </div>
+                  </ion-item>
+                </ion-list>
+              </ion-col>
+            </ion-row>
+          </div>
+        </div>
+        <div class="botonScan center-horizontal first-item" style="margin-top:5em;">
+          <button class="width-90" ion-button block color="secondary" icon-left (click)="scan()">
+            <ion-icon name="md-qr-scanner"></ion-icon>Escanear código
+          </button>
+        </div>
+        <div class="text first-item" text-center>
+          <h4>Pulsa escanear para cargar crédito</h4>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <ion-fab right bottom>
+    <button ion-fab color="danger">
+      <ion-icon name="arrow-dropleft"></ion-icon>
+    </button>
+    <ion-fab-list side="left">
+      <button ion-fab color="danger" (click)="cerrarSesionClick()">
+        <ion-icon name="md-log-out"></ion-icon>
+      </button>
+      <button ion-button small color="danger" (click)="borrarCredito()">Limpiar credito</button>
+      <!-- <button ion-fab><ion-icon name="ios-download-outline"></ion-icon></button> -->
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>

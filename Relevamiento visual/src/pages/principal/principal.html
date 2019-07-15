@@ -1,0 +1,53 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-header>
+  <ion-navbar color="primary" #content>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Relevamiento Visual
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="white" (click)="logout()">
+        <ion-icon name="power"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="flex-v buttons-container">
+    <div class="height-50 big-button-container big-button-container-first">
+      <div class="flex-v center-horizontal center-vertical height-100" (click)="cosasLindasClick()">
+        <div>
+          <ion-icon name="heart"></ion-icon>
+        </div>
+        <div class="text-title">Cosas Lindas del Edificio</div>
+      </div>
+    </div>
+    <div class="height-50 big-button-container big-button-container-second">
+      <div class="flex-v center-horizontal center-vertical height-100" (click)="cosasFeasClick()">
+        <div>
+          <ion-icon name="logo-snapchat"></ion-icon>
+        </div>
+        <div class="text-title">Cosas Feas del Edificio</div>
+      </div>
+    </div>
+  </div>
+</ion-content>

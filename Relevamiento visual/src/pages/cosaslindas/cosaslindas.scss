@@ -1,0 +1,10 @@
+@import "../../theme/variables.scss";
+
+page-cosaslindas {
+    .scroll-content{
+        background-color: $background-color;  
+        display: flex;
+        flex-direction: column;
+        padding: 1em !important;
+    }
+}

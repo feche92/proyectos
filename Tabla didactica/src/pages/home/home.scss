@@ -1,0 +1,206 @@
+@import "roboto";
+@import "noto-sans";
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import "../../theme/variables.scss";
+
+page-home {
+    background-color: $first-detail-color;
+    
+    .item-md{
+      border-radius: 20px;
+      background-color: #ee8700;
+    }
+    .scroll-content{
+        background-image: radial-gradient(#f5ce7a, #f3bb73, #f3b42e, #f5a031, #e07f00);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 0px !important;
+    }
+
+    .monito{
+      display: flex;
+      justify-content: center;
+      background-image: url("assets/imgs/splashTablaFondo.png");
+      background-repeat: no-repeat, repeat;
+      background-color: #cccccc;
+    }
+    #monitoContaniner img{
+      display: block;
+      margin: 0 auto;
+      height: auto;
+      width: 40%;
+      animation: monitoanimation 3100ms linear infinite both;
+      animation-delay: 1s;
+    }
+    .monito-animation-container{
+      height:100%;
+      width:100%;
+      animation: pulse 1s linear forwards;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+}
+
+.mono-container {
+  background-color: transparent;
+}
+
+@-webkit-keyframes rubberBand {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes rubberBand {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+ /*animacion*/
+ #custom-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100000;
+    width:100%;
+    //background-color: #ffae00;
+    background-image: url("../../assets/imgs/splashTablaFondo.png");
+    background-repeat: no-repeat ;
+    background-size: cover ;
+    background-position: center ;
+  }
+  .flb {
+    //background-color: $first-detail-color;
+    //background-image: url("assets/imgs/splashTablaFondo.png");
+    height:100%;
+    width:100%;
+    animation: pulse 1s linear forwards;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Aligner-item {
+    max-width: 50%;
+  }
+  .Aligner-item--top {
+    align-self: flex-start;
+  }
+  .Aligner-item--bottom {
+    align-self: flex-end;
+  }
+  #custom-overlay img {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    height: auto;
+    animation: rubberBand 3100ms linear infinite both;
+    animation-delay: 1s;
+  }
+
+  .animation-target {
+    -webkit-animation: rubberBand 5000ms linear both;
+    animation: rubberBand 5000ms linear both;
+  }
+
+  @keyframes monitoanimation {
+    from, 20%, 53%, 80%, to {
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+      animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+      -webkit-transform: translate3d(0,0,0);
+      transform: translate3d(0,0,0);
+    }
+  
+    40%, 43% {
+      -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+      animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+      -webkit-transform: translate3d(0, -30px, 0);
+      transform: translate3d(0, -30px, 0);
+    }
+  
+    70% {
+      -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+      animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+      -webkit-transform: translate3d(0, -15px, 0);
+      transform: translate3d(0, -15px, 0);
+    }
+  
+    90% {
+      -webkit-transform: translate3d(0,-4px,0);
+      transform: translate3d(0,-4px,0);
+    }
+  }
+  
+  .jump {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+  }
+
